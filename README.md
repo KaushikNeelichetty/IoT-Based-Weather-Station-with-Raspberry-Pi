@@ -1,7 +1,7 @@
 # IOT Weather Station
 ## Abstract
 <p> The purpose of this Weather Station is to provide real time weather information to the user on demand. The weather station consists of Sensors capable of reading temperature, pressure, humidity, etc. These details are sent to a SQL Server that is hosted in a remote location. The android application then reads the data off the databse located in the server and presents it to the user. 
-The existing system gets the data from satellites and sends it to the remote server from which the client side mobile application loads the data, this project takes the reading from the physical environment
+The existing system gets the data from satellites and sends it to the remote server from which the client side mobile application loads the data, this project takes the reading from the physical environment.</p>
 
 ## Components
 <ol>
@@ -126,20 +126,20 @@ Download the application <a href="https://raw.githubusercontent.com/aashishvanan
 Modify its source to get the data from your server and build the apk using Android Studio. you can check out this gitlink directly into andorid studio.<br>
 The Android application displays the weather information the Pi records from its sorroundings. Clicking on the location card will open up Google Maps pointing to the location of the Weather Station , this information is recieved from the GPS Module
 <br>
-<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/app1.PNG" height=480 width =270/>
-<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/app2.PNG" height=480 width =270/>
+<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/app1.PNG" height=480 width =270/></img>
+<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/app2.PNG" height=480 width =270></img>
 <br>
 This happens when you click on the location tile.
 <br>
-<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/localtionClick.PNG" height=480 width =270/>
+<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/localtionClick.PNG" height=480 width =270> </img>
 
 
-##Php Script
-As you have the option to install a wamp server in pi its really easy to connect PHP with MySQL in a pi or you can do it as in our case to make a request from the Python (Pi) to the Dedicated Wamp Server to handle the request.
+## Php Script
+<p>As you have the option to install a wamp server in pi its really easy to connect PHP with MySQL in a pi or you can do it as in our case to make a request from the Python (Pi) to the Dedicated Wamp Server to handle the request.
 You need to place the Php folder to your /etc/var/www/html/temperature/ make sure to add the database parameters according to your database db_location, db_user, db_password, db_name <br>
-Php handles all the request to store all the values sent from the raspberry pi to database. It also is responsible for providing the values from the database to android application. If any Doubts in setting up a wamp server <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu">this</a> should help you.
+Php handles all the request to store all the values sent from the raspberry pi to database. It also is responsible for providing the values from the database to android application. If any Doubts in setting up a wamp server <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu">this</a> should help you.</p>
 
-##Database Creation
+## Database Creation
 We use MySql as our primary database this could be either in the same pi that records the temperature or as in our case a dedicated server to store the records. The create table command with the fields is listed down <br> <br>
 <code>create table temperature( id int(11) primary key auto_increment,temperature varchar(10), pressure varchar(10),
 seapressure varchar(10), humidity varchar(10), latitude varchar(10), longitude varchar(10),
