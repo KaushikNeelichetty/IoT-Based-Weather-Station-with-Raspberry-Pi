@@ -35,7 +35,7 @@ The existing system gets the data from satellites and sends it to the remote ser
 ## Circuit Diagram
 <p>Download Fritzing from <a href="http://fritzing.org/download/">here</a> and open the <a href="https://github.com/aashishvanand/Weatherstation/blob/master/Weather%20Station.fzz">Fritzing project</a> to have a better idea about the connections.<br><b>FULL DISCLOSURE</b> The GPS Reciever used here is not the same as used in the real project, its for indication only, but even this should work fine, as the GPS tutorial is pretty much the same for any reciever.</p>
 
-<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/Weather%20Station_bb.jpg"></img>
+<img src="https://raw.githubusercontent.com/aashishvanand/Weatherstation/master/Screenshots/Weather%20Station_bb.jpg"/>
 
 ## Pre Connection Procedure
 <ol>
@@ -61,6 +61,7 @@ The existing system gets the data from satellites and sends it to the remote ser
   <li> This part of the project reads the values from the analog sensors and sends that data to the Pi using serial communication over the USB cable that comes with the Uno</li>
   <li> Once you plug the Arduino into the Pi, the Pi should be able to supply the power needed to the Pi over USB. Before plugging it in, in your Pi, give the command <code> ls /dev/tty* </code> and run the same command after plugging in the Arduino to the Pi and see which port is added, this is the port to which the Arduino is connected to the Pi, it is usually <i>ttyACM0</i> and it should not change technically. THIS IS FYI, you need not do anything with this information , will be useful for troubleshooting </li>
 </ol>
+
 ## Preparing the Pi for DHT22 / DHT11
 <ol>
   <li> Connect the sensor to the Pi as shown in the circuit diagram </li>
